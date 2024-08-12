@@ -17,8 +17,8 @@ import gradio as gr
 from huggingface_hub import hf_hub_download
 ckpt_path = hf_hub_download(repo_id="ashawkey/LGM", filename="model_fp16_fixrot.safetensors")
 
-#subprocess.run(shlex.split("pip install wheel/diff_gaussian_rasterization-0.0.0-cp310-cp310-linux_x86_64.whl"))
-subprocess.run(shlex.split("pip install git+https://github.com/dendenxu/fast-gaussian-rasterization"))
+subprocess.run(shlex.split("pip install wheel/diff_gaussian_rasterization-0.0.0-cp310-cp310-linux_x86_64.whl"))
+#subprocess.run(shlex.split("pip install git+https://github.com/dendenxu/fast-gaussian-rasterization"))
 
 import kiui
 from kiui.op import recenter
@@ -28,7 +28,7 @@ from core.options import AllConfigs, Options
 from core.models import LGM
 from mvdream.pipeline_mvdream import MVDreamPipeline
 
-import spaces
+#import spaces
 
 IMAGENET_DEFAULT_MEAN = (0.485, 0.456, 0.406)
 IMAGENET_DEFAULT_STD = (0.229, 0.224, 0.225)
