@@ -17,7 +17,7 @@ import gradio as gr
 from huggingface_hub import hf_hub_download
 ckpt_path = hf_hub_download(repo_id="ashawkey/LGM", filename="model_fp16_fixrot.safetensors")
 
-subprocess.run(shlex.split("pip install wheel/diff_gaussian_rasterization-0.0.0-cp310-cp310-linux_x86_64.whl"))
+#subprocess.run(shlex.split("pip install wheel/diff_gaussian_rasterization-0.0.0-cp310-cp310-linux_x86_64.whl"))
 
 import kiui
 from kiui.op import recenter
@@ -95,7 +95,8 @@ pipe_image = pipe_image.to(device)
 bg_remover = rembg.new_session()
 
 # process function
-@spaces.GPU
+#
+#@spaces.GPU
 def process(input_image, prompt, prompt_neg='', input_elevation=0, input_num_steps=30, input_seed=42):
 
     # seed
